@@ -24,9 +24,13 @@ image_url = image_container[main_attr]
 
 # save comic
 filename = curr_date+"_p.jpg"
-f = open("images/"+filename, 'wb')
+filepath = "images\\"+filename
+f = open(filepath, 'wb')
 f.write(requests.get(image_url).content)
 f.close
+
+# output filepath
+print(filepath)
 
 
 
