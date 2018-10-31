@@ -23,7 +23,7 @@ image_container = content.find("div", class_=main_class)
 image_url = image_container[main_attr]
 
 # save comic
-filename = curr_date+"_p.jpg"
+filename = curr_date+"_p.bmp"
 filepath = "images\\"+filename
 f = open(filepath, 'wb')
 f.write(requests.get(image_url).content)
